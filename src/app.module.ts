@@ -8,8 +8,7 @@ import { NotesModule } from "./notes/notes.module";
   imports: [
     NotesModule,
     MongooseModule.forRoot(
-      process.env.MONGODB_STORE_URI ||
-        "mongodb+srv://userpublic:groove1984@cluster0.e7vc9.mongodb.net/Notes?retryWrites=true&w=majority"
+      process.env.MONGODB_STORE_URI || "mongodb://mongo:27017/notes"
     ),
   ],
   controllers: [AppController],
